@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+  <table border="1px" >
+    <thead>
+        <tr> 
+            <th>name</th>
+            <th>age</th>
+            <th>location</th>
+            <th>course</th>
+           
+        </tr>
+    </thead>
+    <tbody id="tle"></tbody>
+  </table>
+
+    <script>
+        const obj=[
+            {"Name":"shobi","Age":"20","location":"gobi","course":"bsc"},
+            {"Name":"savi","Age":"21","location":"erode","course":"msc"},
+            {"Name":"priya","Age":"22","location":"cbe","course":"be"},
+            {"Name":"riya","Age":"18","location":"thingalur","course":"bcom"},
+            {"Name":"babu","Age":"17","location":"siruvalur","course":"mca"},
+            {"Name":"sam","Age":"20","location":"cbe","course":"bca"},
+            {"Name":"somu","Age":"19","location":"gobi","course":"mcom"},
+            {"Name":"jivi","Age":"20","location":"chennai","course":"mbbs"},
+            {"Name":"karthi","Age":"21","location":"erode","course":"nursing"},
+            {"Name":"kabi","Age":"25","location":"gobi","course":"bsc"},
+            
+        ];
+        const tbody=document.getElementById('tle')
+
+        for(let i=0;i<obj.length;i++)
+        {
+          const row=tbody.insertRow()
+          const cell1=row.insertCell(0)
+          const cell2=row.insertCell(1)
+          const cell3=row.insertCell(2)
+          const cell4=row.insertCell(3)
+
+          cell1.innerHTML=obj[i].Name
+          cell2.innerHTML=obj[i].Age
+          cell3.innerHTML=obj[i].location
+          cell4.innerHTML=obj[i].course
+
+        }
+    </script>
+</body>
+</html>

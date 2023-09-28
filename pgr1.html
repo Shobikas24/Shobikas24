@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JSON Table Example</title>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>City</th>
+            </tr>
+        </thead>
+        <tbody id="tableBody">
+        </tbody>
+    </table>
+
+    <script>
+        // Sample JSON data
+        const jsonData = [
+            { "Name": "Alice", "Age": 30, "City": "New York" },
+            { "Name": "Bob", "Age": 25, "City": "Los Angeles" },
+            { "Name": "Charlie", "Age": 35, "City": "Chicago" },
+            { "Name": "David", "Age": 28, "City": "San Francisco" }
+        ];
+
+        // Get the table body element
+        const tableBody = document.getElementById("tableBody");
+
+        // Generate and set the HTML directly
+        tableBody.innerHTML = `
+            <tr>
+                <td>${jsonData[0].Name}</td>
+                <td>${jsonData[0].Age}</td>
+                <td>${jsonData[0].City}</td>
+            </tr>
+            <tr>
+                <td>${jsonData[1].Name}</td>
+                <td>${jsonData[1].Age}</td>
+                <td>${jsonData[1].City}</td>
+            </tr>
+            <tr>
+                <td>${jsonData[2].Name}</td>
+                <td>${jsonData[2].Age}</td>
+                <td>${jsonData[2].City}</td>
+            </tr>
+            <tr>
+                <td>${jsonData[3].Name}</td>
+                <td>${jsonData[3].Age}</td>
+                <td>${jsonData[3].City}</td>
+            </tr>
+        `;
+    </script>
+</body>
+</html>
